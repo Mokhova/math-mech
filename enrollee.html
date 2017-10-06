@@ -13,12 +13,12 @@
   <header class="main-header">
     <h1 class="visually-hidden">Сайт математико-механического факультета УрФУ</h1>
     <a class="main-header-logo">
-      <img src="img/logo.svg" alt="Логотип мат-меха">
+      <img src="img/logo.svg" width="130" height="80" alt="Логотип мат-меха">
     </a>
-    <nav class="main-navigation">
+    <nav class="main-navigation container">
       <ul class="main-navigation-list">
         <li class="main-navigation-item">
-          <a class="main-navigation-link">Поступающим</a>
+          <a class="main-navigation-link current">Поступающим</a>
         </li>
         <li class="main-navigation-item">
           <a class="main-navigation-link" href="">Студенту</a>
@@ -36,17 +36,17 @@
     </nav>
   </header>
   <main>
-    <div>
+    <div class="content-container container">
       <aside class="content-navigation">
         <ul class="content-navigation-list">
           <li class="content-navigation-item">
             <a class="content-navigation-link" href="">Почему мат-мех</a>
           </li>
           <li class="content-navigation-item">
-            <a class="content-navigation-link" href="">ЕГЭ и условия приема</a>
+            <a class="content-navigation-link" href="">ЕГЭ и условия приема</a>
           </li>
           <li class="content-navigation-item">
-            <a class="content-navigation-link" href="">Специальности  и число мест</a>
+            <a class="content-navigation-link current" href="">Специальности  и число мест</a>
           </li>
           <li class="content-navigation-item">
             <a class="content-navigation-link"href="">Стипендия</a>
@@ -55,67 +55,108 @@
             <a class="content-navigation-link" href="">Общежитие</a>
           </li>
           <li class="content-navigation-item">
-            <a class="content-navigation-link" href="">Информация об университете</a>
+            <a class="content-navigation-link" href="">Информация об университете</a>
           </li>
         </ul>
-    </aside>
+      </aside>
       <section class="main-content">
         <h2 class="main-content-header">Специальности  и число мест</h2>
         <section class="specializations">
           <h3 class="visually-hidden">Виды специальностей</h3>
           <ul class="specializations-tabs">
             <li class="specializations-tabs">
-              <a>Компьютерные</a>
+              <a class="current">Компьютерные</a>
+              <span class="specializations-tabs-divider">●</span>
             </li>
             <li class="specializations-tabs">
               <a href="#">Математические</a>
             </li>
           </ul>
-          <ul class="specializations-tiles">
-            <li class="specializations-tile-container">
-              <a href="#">
-                <h4 class="specializations-title">Фундаментальная информатика и ИТ</h4>
-                <p class="specializations-description">Программирование, направление развивается при поддержке СКБ Контур</p>
+          <ul class="specializations-list">
+            <li class="specializations-item">
+              <a class="specializations-link" href="#">
+                <div class="specializations-wrapper">
+                  <h4 class="specializations-title">Фундаментальная информатика и ИТ</h4>
+                  <p class="specializations-description">Программирование, направление развивается при поддержке СКБ Контур</p>
+                </div>
                 <table class="specializations-places">
                   <tr>
                     <td>6 платных</td>
-                    <td>60 бюджет: 6 квота 1 целевое</td>
+                    <td>60 бюджет:</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>6 квота</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>1 целевое</td>
                   </tr>
                 </table>
               </a>
             </li>
-            <li class="specializations-tile-container">
-              <a href="#">
-                <h4 class="specializations-title">Математическое обеспечение и администрирование ИС</h4>
-                <p class="specializations-description">Администрирование 1С</p>
+            <li class="specializations-item">
+              <a class="specializations-link" href="#">
+                <div class="specializations-wrapper">
+                  <h4 class="specializations-title">Математическое обеспечение и администрирование ИС</h4>
+                  <p class="specializations-description">Администрирование 1С</p>
+                </div>
                 <table class="specializations-places">
                   <tr>
                     <td>5 платных</td>
-                    <td>25 бюджет: 3 квота</td>
+                    <td>25 бюджет:</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>3 квота</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
                   </tr>
                 </table>
               </a>
             </li>
-            <li class="specializations-tile-container">
-              <a href="#">
-                <h4 class="specializations-title">Компьютерные науки</h4>
-                <p class="specializations-description">Программирование</p>
+            <li class="specializations-item">
+              <a class="specializations-link" href="#">
+                <div class="specializations-wrapper">
+                  <h4 class="specializations-title">Компьютерные науки</h4>
+                  <p class="specializations-description">Программирование</p>
+                </div>
                 <table class="specializations-places">
                   <tr>
                     <td>6 платных</td>
-                    <td>75 бюджет: 8 квота 1 целевое</td>
+                    <td>75 бюджет:</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>8 квота</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>1 целевое</td>
                   </tr>
                 </table>
               </a>
             </li>
-            <li class="specializations-tile-container">
-              <a href="#">
-                <h4 class="specializations-title">Компьютерная безопасность</h4>
-                <p class="specializations-description">Программирование, ФСБ</p>
+            <li class="specializations-item">
+              <a class="specializations-link" href="#">
+                <div class="specializations-wrapper">
+                  <h4 class="specializations-title">Компьютерная безопасность</h4>
+                  <p class="specializations-description">Программирование, ФСБ</p>
+                </div>
                 <table class="specializations-places">
                   <tr>
                     <td>—</td>
-                    <td>25 бюджет: 3 квота 3 целевое</td>
+                    <td>25 бюджет:</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>3 квота</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>3 целевое</td>
                   </tr>
                 </table>
               </a>
@@ -139,54 +180,54 @@
           <h3 class="paragraph-title">Язки программирования</h3>
           <h4 class="paragraph-subtitle">Обязательные</h4>
           <ul class="paragraph-list-images">
-            <li class="paragraph-item">
+            <li class="paragraph-item-image">
               <img src="img/language-0.png" alt="C#"></li>
-            <li class="paragraph-item">
+            <li class="paragraph-item-image">
               <img src="img/language-1.png" alt="Python">
             </li>
-            <li class="paragraph-item">
+            <li class="paragraph-item-image">
               <img src="img/language-2.png" alt="Javascript">
             </li>
-            <li class="paragraph-item">
+            <li class="paragraph-item-image">
               <img src="img/language-3.png" alt="Java">
             </li>
-            <li class="paragraph-item">
+            <li class="paragraph-item-image">
               <img src="img/language-4.png" alt="Haskell">
             </li>
-            <li class="paragraph-item">
+            <li class="paragraph-item-image">
               <img src="img/language-5.png" alt="Prolog">
             </li>
-            <li class="paragraph-item">
+            <li class="paragraph-item-image">
               <img src="img/language-6.png" alt="Assembler">
             </li>
-            <li class="paragraph-item">
+            <li class="paragraph-item-image">
               <img src="img/language-7.png" alt="SQL">
             </li>
-            <li class="paragraph-item">
+            <li class="paragraph-item-image">
               <img src="img/language-8.png" alt="CMD">
             </li>
-            <li class="paragraph-item">
+            <li class="paragraph-item-image">
               <img src="img/language-9.png" alt="Bash">
             </li>
           </ul>
           <h4>Дополнительные</h4>
           <ul class="paragraph-list-images">
-            <li class="paragraph-item">
+            <li class="paragraph-item-image">
               <img src="img/language-add-0.png" alt="Ruby">
             </li>
-            <li class="paragraph-item">
+            <li class="paragraph-item-image">
               <img src="img/language-add-1.png" alt="C++">
             </li>
-            <li class="paragraph-item">
+            <li class="paragraph-item-image">
               <img src="img/language-add-2.png" alt="C">
             </li>
-            <li class="paragraph-item">
+            <li class="paragraph-item-image">
               <img src="img/language-add-3.png" alt="NoSQL">
             </li>
-            <li class="paragraph-item">
+            <li class="paragraph-item-image">
               <img src="img/language-add-4.png" alt="php">
             </li>
-            <li class="paragraph-item">
+            <li class="paragraph-item-image">
               <img src="img/language-add-5.png" alt="Perl">
             </li>
           </ul>
