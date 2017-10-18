@@ -44,18 +44,37 @@ body {
 }
 
 .main-navigation-link {
+  position: relative;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 700;
   line-height: 30px;
   letter-spacing: 1px;
 
+  color: #f82959;
+}
+
+.main-navigation-link.current {
+  border-bottom: 3px solid #f82959;
   color: #4a4a4a;
 }
 
-.main-navigation-link.current,
-.content-navigation-link.current {
-  color: #F82959;
+
+.main-navigation-link.current::after {
+  content: '↓';
+  font-family: 'Seravek';
+  font-size: 20px;
+  position: absolute;
+  right: -20px;
+  top: -2px;
+  color: #f82959;
+}
+
+.main-navigation-link:not(.current):hover,
+.content-navigation-link:not(.current):hover {
+  background-color: #f82959;
+  color: #fff;
+  transition: .1s ease-out;
 }
 
 .content-container {
@@ -64,14 +83,16 @@ body {
 
 .content-navigation {
   order: 1;
-  width: 196px;
-  padding: 0 20px;
+  width: 226px;
+  padding: 40px 20px 0;
   box-sizing: border-box;
+  line-height: 20px;
   background-color: #fff;
 }
 
 .content-navigation-list {
   padding: 0;
+  margin: 0;
   list-style-type: none;
 }
 
@@ -80,35 +101,61 @@ body {
 }
 
 .content-navigation-link {
+  position: relative;
   text-decoration: none;
   font-weight: 600;
   line-height: 20px;
+  color: #f82959;
+}
+
+.content-navigation-link.current {
   color: #4a4a4a;
 }
 
+.content-navigation-link.current::before {
+  content: '←';
+  position: absolute;
+  top: 3px;
+  left: -37px;
+  color: #4a4a4a;
+  font-family: 'Seravek';
+  font-size: 30px;
+  font-weight: 400;
+}
+
 .main-content {
-  width: 850px;
-  padding: 0 50px;
+  width: 820px;
+  padding: 35px 50px 150px;
   box-sizing: border-box;
   background-color: #f5f5f5;
 }
 
 .main-content-header {
+  margin-top: 0;
+  margin-bottom: 40px;
   font-size: 30px;
-  font-weight: 700;
+  font-weight: 800;
+}
+
+.specializations {
+  margin-bottom: 80px;
+}
+
+.specializations-tabs-list {
+  padding: 0;
+  margin: 0 0 20px 0;
+  list-style-type: none;
 }
 
 .specializations-tabs {
   display: inline-block;
-  padding: 0;
-  list-style-type: none;
 }
 
 .specializations-tabs a {
   font-size: 20px;
   font-weight: 700;
   text-decoration: none;
-  color: #0078FF;
+  color: #0078ff;
 }
 
 .specializations-tabs a.current {
@@ -120,17 +167,15 @@ body {
 }
 
 .specializations-list {
+  width: 600px;
   padding: 0;
   list-style-type: none;
-}
-
-.specializations-item {
-  margin-bottom: 50px;
 }
 
 .specializations-link {
   display: flex;
   align-items: baseline;
+  justify-content: space-between;
   text-decoration: none;
   color: #4a4a4a;
 }
@@ -140,7 +185,14 @@ body {
   margin-right: 50px;
 }
 
+.specializations-item {
+  margin-bottom: 60px;
+  padding-top: 10px;
+  border-top: 3px solid;
+}
+
 .specializations-title {
+  position: relative;
   margin: 0 0 5px 0;
   padding: 0;
   font-weight: 700;
@@ -174,23 +226,91 @@ body {
 }
 
 .paragraph-list {
+  margin-left: 2px;
   padding: 0;
   list-style-type: none;
+}
+
+.paragraph-item {
+  margin-bottom: 10px;
+}
+
+.paragraph-item p {
+  display: inline-block;
+  width: 600px;
+  margin: 0;
 }
 
 .paragraph-item::before {
   content: '— ';
+  vertical-align: top;
+  margin-right: 3px;
+  line-height: 23px;
 }
 
 .paragraph-list-images {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   padding: 0;
+  margin-left: -15px;
   list-style-type: none;
 }
 
 .paragraph-item-image {
-  margin-right: 20px;
+  margin-right: 45px;
+  margin-bottom: 30px;
+  width: 85px;
+  text-align: center;
+}
+
+.paragraph-item-image p {
+  text-transform: uppercase;
+  margin: 10px 0 0 0;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.paragraph + .paragraph {
+  margin-top: 50px;
+}
+
+.factoid-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.factoid-list b {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.factoid-list p {
+  margin: 0;
+  width: 410px;
+}
+
+.factoid-item {
+  margin: 30px 0;
+}
+
+.main-content-header + .paragraph > p {
+  margin-top: -10px;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #0078ff;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
 }
 
 header, main, footer {
