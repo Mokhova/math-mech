@@ -173,6 +173,11 @@ main {
   color: #4a4a4a;
 }
 
+.specializations-tabs a:not(.current):hover {
+  background-color: #0078ff;
+  color: #fff;
+}
+
 .specializations-tabs-divider {
   margin: 0 10px;
 }
