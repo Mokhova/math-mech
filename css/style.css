@@ -28,6 +28,7 @@ body {
 }
 
 .main-navigation {
+  width: 100%;
   background-color: #fff;
 }
 
@@ -152,43 +153,70 @@ main {
   margin-bottom: 80px;
 }
 
-.specializations-tabs-list {
+.specialization-tab-list {
   padding: 0;
   margin: 0 0 20px 0;
   list-style-type: none;
 }
 
-.specializations-tabs {
+.specialization-tab {
   display: inline-block;
-}
-
-.specializations-tabs a {
+  margin-bottom: 20px;
   font-size: 20px;
   font-weight: 700;
   text-decoration: none;
   color: #0078ff;
 }
 
-.specializations-tabs a.current {
+.specialization-tab-radio {
+  display: none;
+}
+
+.specialization-tab-radio:checked + .specialization-tab {
   color: #4a4a4a;
 }
 
-.specializations-tabs a:not(.current):hover {
+.specialization-tab-radio:not(:checked) + .specialization-tab:hover {
   background-color: #0078ff;
   color: #fff;
+  cursor: pointer;
 }
 
-.specializations-tabs-divider {
+.specialization-tab-divider {
   margin: 0 10px;
 }
 
-.specializations-list {
+.specialization-list {
   width: 600px;
   padding: 0;
   list-style-type: none;
 }
 
-.specializations-link {
+.specialization-list {
+  width: 0;
+  position: absolute;
+  transform: scaleY(0.9);
+
+  visibility: hidden;
+  opacity: 0;
+
+  transition: opacity .1s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.specializations > .specialization-tab-radio:nth-of-type(1):checked ~ .specialization-list:nth-of-type(1),
+.specializations > .specialization-tab-radio:nth-of-type(2):checked ~ .specialization-list:nth-of-type(2) {
+  width: 600px;
+  position: static;
+  transform: scaleY(1);
+  transform-origin: top center;
+
+  visibility: visible;
+  opacity: 1;
+
+  transition: opacity .1s cubic-bezier(0.55, 0.055, 0.675, 0.19) .05s;
+}
+
+.specialization-link {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
@@ -196,18 +224,18 @@ main {
   color: #4a4a4a;
 }
 
-.specializations-wrapper {
+.specialization-wrapper {
   width: 350px;
   margin-right: 50px;
 }
 
-.specializations-item {
+.specialization-item {
   margin-bottom: 60px;
   padding-top: 10px;
   border-top: 3px solid;
 }
 
-.specializations-title {
+.specialization-title {
   position: relative;
   margin: 0 0 5px 0;
   padding: 0;
@@ -215,24 +243,24 @@ main {
   color: #0078FF;
 }
 
-.specializations-description {
+.specialization-description {
   margin: 0;
   line-height: 25px;
 }
 
-.specializations-places {
+.specialization-places {
   width: 195px;
   font-size: 14px;
   font-weight: 700;
   color: #8c8c8c;
 }
 
-.specializations-places td {
+.specialization-places td {
   padding: 0;
   line-height: 19px;
 }
 
-.specializations-places td:first-child{
+.specialization-places td:first-child{
   width: 100px;
 }
 
@@ -370,7 +398,6 @@ header, main, footer {
 }
 
 .container {
-  width: 1054px;
   margin-left: 154px;
 }
 
