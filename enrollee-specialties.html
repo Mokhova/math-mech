@@ -20,7 +20,7 @@
         <li class="main-navigation-item">
           <a class="main-navigation-link current">Поступающим</a>
         </li>
-        <li class="main-navigation-item">
+        <!-- <li class="main-navigation-item">
           <a class="main-navigation-link" href="">Студенту</a>
         </li>
         <li class="main-navigation-item">
@@ -31,7 +31,7 @@
         </li>
         <li class="main-navigation-item">
           <a class="main-navigation-link" href="">Документы</a>
-        </li>
+        </li> -->
       </ul>
     </nav>
   </header>
@@ -63,23 +63,22 @@
         <h2 class="main-content-title">Специальности  и число мест</h2>
         <section class="specializations">
           <h3 class="visually-hidden">Виды специальностей</h3>
-          <ul class="specializations-tabs-list">
-            <li class="specializations-tabs">
-              <a class="current">Компьютерные</a>
-              <span class="specializations-tabs-divider">●</span>
-            </li>
-            <li class="specializations-tabs">
-              <a href="#">Математические</a>
-            </li>
-          </ul>
-          <ul class="specializations-list">
-            <li class="specializations-item">
-              <a class="specializations-link" href="#">
-                <div class="specializations-wrapper">
-                  <h4 class="specializations-title">Фундаментальная информатика и ИТ</h4>
-                  <p class="specializations-description">Программирование, направление развивается при поддержке СКБ Контур</p>
+          <input type="radio" name="specialization-name" class="specialization-tab-radio computer" id="specialization-computer" checked="">
+          <label class="specialization-tab" for="specialization-computer">Компьютерные</label>
+
+          <span class="specialization-tab-divider">●</span>
+
+          <input type="radio" name="specialization-name" class="specialization-tab-radio math" id="specialization-math">
+          <label class="specialization-tab" for="specialization-math">Математические</label>
+
+          <ul class="specialization-list computer">
+            <li class="specialization-item">
+              <a class="specialization-link" href="#">
+                <div class="specialization-wrapper">
+                  <h4 class="specialization-title">Фундаментальная информатика и ИТ</h4>
+                  <p class="specialization-description">Программирование, направление развивается при поддержке СКБ Контур</p>
                 </div>
-                <table class="specializations-places">
+                <table class="specialization-places">
                   <tr>
                     <td>6 платных</td>
                     <td>60 бюджет:</td>
@@ -95,13 +94,13 @@
                 </table>
               </a>
             </li>
-            <li class="specializations-item">
-              <a class="specializations-link" href="#">
-                <div class="specializations-wrapper">
-                  <h4 class="specializations-title">Математическое обеспечение и администрирование ИС</h4>
-                  <p class="specializations-description">Администрирование 1С</p>
+            <li class="specialization-item">
+              <a class="specialization-link" href="#">
+                <div class="specialization-wrapper">
+                  <h4 class="specialization-title">Математическое обеспечение и администрирование ИС</h4>
+                  <p class="specialization-description">Администрирование 1С</p>
                 </div>
-                <table class="specializations-places">
+                <table class="specialization-places">
                   <tr>
                     <td>5 платных</td>
                     <td>25 бюджет:</td>
@@ -117,13 +116,13 @@
                 </table>
               </a>
             </li>
-            <li class="specializations-item">
-              <a class="specializations-link" href="#">
-                <div class="specializations-wrapper">
-                  <h4 class="specializations-title">Компьютерные науки</h4>
-                  <p class="specializations-description">Программирование</p>
+            <li class="specialization-item">
+              <a class="specialization-link" href="#">
+                <div class="specialization-wrapper">
+                  <h4 class="specialization-title">Компьютерные науки</h4>
+                  <p class="specialization-description">Программирование</p>
                 </div>
-                <table class="specializations-places">
+                <table class="specialization-places">
                   <tr>
                     <td>6 платных</td>
                     <td>75 бюджет:</td>
@@ -139,13 +138,13 @@
                 </table>
               </a>
             </li>
-            <li class="specializations-item">
-              <a class="specializations-link" href="#">
-                <div class="specializations-wrapper">
-                  <h4 class="specializations-title">Компьютерная безопасность</h4>
-                  <p class="specializations-description">Программирование, ФСБ</p>
+            <li class="specialization-item">
+              <a class="specialization-link" href="#">
+                <div class="specialization-wrapper">
+                  <h4 class="specialization-title">Компьютерная безопасность</h4>
+                  <p class="specialization-description">Программирование, ФСБ</p>
                 </div>
-                <table class="specializations-places">
+                <table class="specialization-places">
                   <tr>
                     <td>—</td>
                     <td>25 бюджет:</td>
@@ -162,23 +161,79 @@
               </a>
             </li>
           </ul>
+          <ul class="specialization-list math hidden">
+            <li class="specialization-item">
+              <a class="specialization-link" href="#">
+                <div class="specialization-wrapper">
+                  <h4 class="specialization-title">Математика</h4>
+                  <p class="specialization-description">
+                    Большой выбор спецкурсов и специализаций,
+                    сильная математика и серьезная программистская база
+                  </p>
+                </div>
+                <table class="specialization-places">
+                  <tr>
+                    <td>3 платных</td>
+                    <td>50 бюджет:</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>5 квота</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </table>
+              </a>
+            </li>
+            <li class="specialization-item">
+              <a class="specialization-link" href="#">
+                <div class="specialization-wrapper">
+                  <h4 class="specialization-title">Механика</h4>
+                  <p class="specialization-description">
+                    Теоретические и прикладные разделы физики
+                  </p>
+                </div>
+                <table class="specialization-places">
+                  <tr>
+                    <td>3 платных</td>
+                    <td>25 бюджет:</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>3 квота</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>2 целевое</td>
+                  </tr>
+                </table>
+              </a>
+            </li>
+          </ul>
         </section>
         <section class="paragraph">
           <h3 class="paragraph-title">Преимущества компьютерных направлений</h3>
           <ul class="paragraph-list">
             <li class="paragraph-item">
-              <p>Преподаватели—профессоры мат-меха и сотрудники ИТ-компаний</p>
+              <p>Преподаватели—профессорА мат-меха и сотрудники ИТ-компаний;</p>
             </li>
             <li class="paragraph-item">
-              <p>После второго курса можно пройти стажировку в крупной ИТ-компании и устроиться на работу</p>
+              <p>После второго курса можно пройти стажировку в крупной ИТ-компании и устроиться на работу;</p>
             </li>
             <li class="paragraph-item">
               Каждый семестр читаются дополнительные курсы на разные темы;
             </li>
             <li class="paragraph-item">
-              <p>Участие в соревнованиях по программированию и защите информации: cтуденты мат-меха
-              14 раз проходили в финал чемпионата мира по программированию ACM ICPC.
-              Завоевали медали в 2001, 2010, 2011, 2016 и 2017 годах;</p>
+              <p>Участие в соревнованиях по программированию;</p>
+            </li>
+            <li class="paragraph-item">
+              <p>
+                Участие и организация соревнований и обучения по защите информации:
+                сообщество “Хакердом” (vk.com/hackerdom) организует курс по компьютерной
+                безопасности и проводит соревнования по CTF;
+              </p>
             </li>
             <li class="paragraph-item">
               <p>Мат-мех организует и развивает «Хакердом». «Хакердом» организует RuCTF— открытые игры
@@ -262,5 +317,6 @@
       </section>
     </div>
   </main>
+  <script src="js/basic.js" type="application/javascript"></script>
 </body>
 </html>
